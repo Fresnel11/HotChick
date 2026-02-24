@@ -27,6 +27,7 @@ const Navbar = () => {
     { to: "/", label: i18n.language === "fr" ? "Accueil" : "Home" },
     { to: "/menu", label: t("nav.menu") },
     { to: "/locations", label: t("nav.locations") },
+    { to: "/reservation", label: i18n.language === "fr" ? "Réserver" : "Reserve" },
   ];
 
   const isActive = (path: string) => location.pathname === path;
