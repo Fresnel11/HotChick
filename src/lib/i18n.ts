@@ -64,6 +64,32 @@ const resources = {
                 weeksAgo: "il y a {{count}} semaines",
                 aDayAgo: "hier",
                 aWeekAgo: "il y a 1 semaine"
+            },
+            menu: {
+                categories: {
+                    all: "Tous",
+                    chicken: "Poulet",
+                    burgers: "Burgers",
+                    wraps: "Wraps",
+                    fries: "Frites",
+                    drinks: "Boissons",
+                    desserts: "Desserts"
+                },
+                item_1: { name: "Tenders Croustillants Classiques", desc: "Tenders de poulet dorés panés à la main servis avec notre sauce signature." },
+                item_2: { name: "Tenders Épicés", desc: "Nos tenders enrobés d'un glaçage au piment de Cayenne pour ceux qui aiment le piquant." },
+                item_3: { name: "Family Bucket (12pc)", desc: "12 pièces de poulet croustillant doré, parfait pour partager en famille." },
+                item_4: { name: "L'OG Chicken Burger", desc: "Filet de poulet croustillant, laitue fraîche, cornichons et notre sauce crémeuse HotChick." },
+                item_5: { name: "Spicy Inferno Burger", desc: "Un burger au poulet piquant avec jalapeños, fromage pepper jack et mayo sriracha." },
+                item_6: { name: "Double Stack Burger", desc: "Deux filets croustillants empilés avec du fromage, du bacon et notre sauce signature." },
+                item_7: { name: "Wrap Poulet Classique", desc: "Aiguillettes de poulet croustillantes avec légumes frais et sauce ranch." },
+                item_8: { name: "Wrap César Épicé", desc: "Poulet épicé avec romaine, parmesan et sauce césar onctueuse dans une tortilla chaude." },
+                item_9: { name: "Frites Croustillantes", desc: "Frites dorées, parfaitement salées. L'accompagnement ultime." },
+                item_10: { name: "Loaded Cheese Fries", desc: "Nos frites croustillantes nappées de cheddar fondu et d'éclats de bacon." },
+                item_11: { name: "Cola Classique", desc: "Cola rafraîchissant bien glacé pour accompagner votre repas." },
+                item_12: { name: "Citronnade Fraîche", desc: "Citronnade fraîchement pressée avec un soupçon de menthe." },
+                item_13: { name: "Brownie au Chocolat", desc: "Brownie riche et fondant avec un cœur coulant." },
+                item_14: { name: "Cookie Dough Sundae", desc: "Glace vanille nappée de morceaux de pâte à cookie et coulis de chocolat." },
+                addToCart: "Ajouter"
             }
         }
     },
@@ -128,6 +154,32 @@ const resources = {
                 weeksAgo: "{{count}} weeks ago",
                 aDayAgo: "1 day ago",
                 aWeekAgo: "1 week ago"
+            },
+            menu: {
+                categories: {
+                    all: "All",
+                    chicken: "Chicken",
+                    burgers: "Burgers",
+                    wraps: "Wraps",
+                    fries: "Fries",
+                    drinks: "Drinks",
+                    desserts: "Desserts"
+                },
+                item_1: { name: "Classic Crispy Tenders", desc: "Hand-breaded golden chicken tenders served with our signature dipping sauce." },
+                item_2: { name: "Spicy Hot Tenders", desc: "Our tenders tossed in a fiery cayenne glaze for those who crave the heat." },
+                item_3: { name: "Family Bucket (12pc)", desc: "12 pieces of golden crispy chicken, perfect for sharing with the family." },
+                item_4: { name: "The OG Chicken Burger", desc: "Crispy chicken fillet, fresh lettuce, pickles and our creamy HotChick sauce." },
+                item_5: { name: "Spicy Inferno Burger", desc: "A fiery chicken burger with jalapeños, pepper jack cheese and sriracha mayo." },
+                item_6: { name: "Double Stack Burger", desc: "Two crispy fillets stacked high with cheese, bacon and signature sauce." },
+                item_7: { name: "Classic Chicken Wrap", desc: "Crispy chicken strips wrapped with fresh veggies and ranch dressing." },
+                item_8: { name: "Spicy Caesar Wrap", desc: "Spiced chicken with romaine, parmesan and creamy caesar dressing in a warm tortilla." },
+                item_9: { name: "Crispy Fries", desc: "Golden, perfectly salted fries. The ultimate sidekick." },
+                item_10: { name: "Loaded Cheese Fries", desc: "Our crispy fries smothered in melted cheddar and bacon bits." },
+                item_11: { name: "Classic Cola", desc: "Ice-cold refreshing cola to complement your meal." },
+                item_12: { name: "Fresh Lemonade", desc: "Freshly squeezed lemonade with a hint of mint." },
+                item_13: { name: "Chocolate Brownie", desc: "Rich, fudgy brownie with a warm gooey center." },
+                item_14: { name: "Cookie Dough Sundae", desc: "Vanilla ice cream topped with cookie dough chunks and chocolate drizzle." },
+                addToCart: "Add"
             }
         }
     }
