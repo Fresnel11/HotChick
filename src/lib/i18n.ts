@@ -90,6 +90,41 @@ const resources = {
                 item_13: { name: "Brownie au Chocolat", desc: "Brownie riche et fondant avec un cœur coulant." },
                 item_14: { name: "Cookie Dough Sundae", desc: "Glace vanille nappée de morceaux de pâte à cookie et coulis de chocolat." },
                 addToCart: "Ajouter"
+            },
+            menuPage: {
+                badge: "NOTRE CARTE",
+                title: "DÉCOUVREZ VOS SAVEURS",
+                description: "Chaque plat est préparé avec des ingrédients de qualité et passion."
+            },
+            cart: {
+                emptyTitle: "VOTRE PANIER EST VIDE",
+                emptyText: "On dirait que vous n'avez encore rien ajouté.",
+                browse: "PARCOURIR LE MENU",
+                title: "VOTRE PANIER",
+                total: "TOTAL",
+                checkout: "PASSER À LA CAISSE"
+            },
+            checkout: {
+                title: "CAISSE",
+                successTitle: "COMMANDE PASSÉE !",
+                successText: "Merci {{name}} ! Votre commande est en préparation.",
+                backHome: "RETOUR À L'ACCUEIL",
+                nameLabel: "NOM *",
+                namePlaceholder: "Votre nom complet",
+                phoneLabel: "TÉLÉPHONE *",
+                typeLabel: "TYPE DE COMMANDE",
+                delivery: "LIVRAISON",
+                pickup: "À EMPORTER",
+                addressLabel: "ADRESSE *",
+                addressPlaceholder: "Adresse de livraison",
+                timeLabel: "HEURE SOUHAITÉE",
+                summaryItems: "{{count}} article(s)",
+                placeOrder: "PASSER LA COMMANDE",
+                errorFields: "Veuillez remplir tous les champs obligatoires"
+            },
+            notFound: {
+                title: "Oups ! Page non trouvée",
+                backHome: "Retour à l'accueil"
             }
         }
     },
@@ -161,7 +196,7 @@ const resources = {
                     chicken: "Chicken",
                     burgers: "Burgers",
                     wraps: "Wraps",
-                    fries: "Fries",
+                    fries: "Fries", // Fixed typo in previous step (should be Fries)
                     drinks: "Drinks",
                     desserts: "Desserts"
                 },
@@ -180,6 +215,41 @@ const resources = {
                 item_13: { name: "Chocolate Brownie", desc: "Rich, fudgy brownie with a warm gooey center." },
                 item_14: { name: "Cookie Dough Sundae", desc: "Vanilla ice cream topped with cookie dough chunks and chocolate drizzle." },
                 addToCart: "Add"
+            },
+            menuPage: {
+                badge: "OUR MENU",
+                title: "FIND YOUR FLAVOR",
+                description: "Every dish crafted with premium ingredients and passion."
+            },
+            cart: {
+                emptyTitle: "YOUR CART IS EMPTY",
+                emptyText: "Looks like you haven't added anything yet.",
+                browse: "BROWSE MENU",
+                title: "YOUR CART",
+                total: "TOTAL",
+                checkout: "PROCEED TO CHECKOUT"
+            },
+            checkout: {
+                title: "CHECKOUT",
+                successTitle: "ORDER PLACED!",
+                successText: "Thanks {{name}}! Your order is being prepared.",
+                backHome: "BACK TO HOME",
+                nameLabel: "NAME *",
+                namePlaceholder: "Your full name",
+                phoneLabel: "PHONE *",
+                typeLabel: "ORDER TYPE",
+                delivery: "DELIVERY",
+                pickup: "PICKUP",
+                addressLabel: "ADDRESS *",
+                addressPlaceholder: "Delivery address",
+                timeLabel: "PREFERRED TIME",
+                summaryItems: "{{count}} item(s)",
+                placeOrder: "PLACE ORDER",
+                errorFields: "Please fill all required fields"
+            },
+            notFound: {
+                title: "Oops! Page not found",
+                backHome: "Return to Home"
             }
         }
     }

@@ -1,9 +1,11 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useTranslation } from "react-i18next";
 import { menuItems, categories } from "@/data/menuData";
 import ProductCard from "@/components/ProductCard";
 
 const MenuPage = () => {
+  const { t } = useTranslation();
   const [active, setActive] = useState("All");
   const filtered = active === "All" ? menuItems : menuItems.filter((i) => i.category === active);
 
@@ -16,10 +18,10 @@ const MenuPage = () => {
           transition={{ duration: 0.5 }}
           className="text-center mb-10"
         >
-          <span className="font-display text-primary tracking-[0.3em] text-sm">OUR MENU</span>
-          <h1 className="font-display text-4xl md:text-5xl mt-2">FIND YOUR FLAVOR</h1>
+          <span className="font-display text-primary tracking-[0.3em] text-sm">{t("menuPage.badge")}</span>
+          <h1 className="font-display text-4xl md:text-5xl mt-2">{t("menuPage.title")}</h1>
           <p className="text-muted-foreground mt-3 max-w-md mx-auto">
-            Every dish crafted with premium ingredients and passion.
+            {t("menuPage.description")}
           </p>
         </motion.div>
 
@@ -34,13 +36,12 @@ const MenuPage = () => {
             <button
               key={cat}
               onClick={() => setActive(cat)}
-              className={`font-display text-sm tracking-wider px-5 py-2.5 rounded-full transition-all duration-300 ${
-                active === cat
+              className={`font-display text-sm tracking-wider px-5 py-2.5 rounded-full transition-all duration-300 ${active === cat
                   ? "bg-primary text-primary-foreground shadow-lg shadow-primary/20"
                   : "bg-card text-muted-foreground hover:bg-primary/10 border border-border"
-              }`}
+                }`}
             >
-              {cat.toUpperCase()}
+              {t(`menu.categories.${cat.toLowerCase()}`).toUpperCase()}
             </button>
           ))}
         </motion.div>
