@@ -1,7 +1,8 @@
-import { Flame, MapPin, Phone, Clock, Instagram, Facebook, Twitter } from "lucide-react";
+import { MapPin, Phone, Clock, Instagram, Facebook, Twitter, Flame } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
+import hotchickLogo from "@/assets/hotchick_logo.png";
 
 const Footer = () => {
   const { t, i18n } = useTranslation();
@@ -19,7 +20,7 @@ const Footer = () => {
           {/* Brand */}
           <div className="md:col-span-1">
             <div className="flex items-center gap-2 mb-4">
-              <Flame className="w-6 h-6 text-primary" />
+              <img src={hotchickLogo} alt="HotChick logo" className="h-10 w-auto" />
               <span className="font-display text-2xl text-dark-surface-foreground tracking-wider">
                 HOT<span className="text-primary">CHICK</span>
               </span>
@@ -88,7 +89,7 @@ const Footer = () => {
 
         <div className="border-t border-dark-surface-foreground/10 pt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
           <p>© {new Date().getFullYear()} HotChick. {t("footer.rights")}</p>
-          <p className="text-dark-surface-foreground/40">{t("footer.crafted")}</p>
+          {/* <p className="text-dark-surface-foreground/40">{t("footer.crafted")}</p> */}
         </div>
       </div>
     </footer>

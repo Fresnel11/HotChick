@@ -85,8 +85,8 @@ const CheckoutPage = () => {
                   type="button"
                   onClick={() => setForm({ ...form, method: m })}
                   className={`flex-1 font-display text-sm tracking-wider py-3 rounded-lg border transition-all ${form.method === m
-                      ? "bg-primary text-primary-foreground border-primary"
-                      : "bg-muted border-border hover:border-primary/30"
+                    ? "bg-primary text-primary-foreground border-primary"
+                    : "bg-muted border-border hover:border-primary/30"
                     }`}
                 >
                   {t(`checkout.${m}`).toUpperCase()}
@@ -121,7 +121,7 @@ const CheckoutPage = () => {
           <div className="border-t border-border pt-5">
             <div className="flex justify-between items-center mb-1 text-sm">
               <span className="text-muted-foreground">{t("checkout.summaryItems", { count: items.reduce((s, i) => s + i.quantity, 0) })}</span>
-              <span className="font-display text-xl text-primary">${totalPrice.toFixed(2)}</span>
+              <span className="font-display text-xl text-primary">{totalPrice.toLocaleString()} <span className="text-sm">FCFA</span></span>
             </div>
           </div>
 

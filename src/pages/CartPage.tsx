@@ -35,7 +35,7 @@ const CartPage = () => {
               <img src={item.image} alt={t(`menu.item_${item.id}.name`)} className="w-20 h-20 rounded-lg object-cover shrink-0" />
               <div className="flex-1 min-w-0">
                 <h3 className="font-display text-base tracking-wide truncate">{t(`menu.item_${item.id}.name`)}</h3>
-                <p className="text-primary font-display text-lg">${item.price.toFixed(2)}</p>
+                <p className="text-primary font-display text-lg">{item.price.toLocaleString()} <span className="text-sm">FCFA</span></p>
               </div>
               <div className="flex items-center gap-2">
                 <button
@@ -63,7 +63,7 @@ const CartPage = () => {
         <div className="bg-card p-6 rounded-xl shadow-sm border border-border/50">
           <div className="flex justify-between items-center mb-4">
             <span className="font-display text-lg tracking-wide">{t("cart.total")}</span>
-            <span className="font-display text-2xl text-primary">${totalPrice.toFixed(2)}</span>
+            <span className="font-display text-2xl text-primary">{totalPrice.toLocaleString()} <span className="text-sm">FCFA</span></span>
           </div>
           <Link
             to="/checkout"
