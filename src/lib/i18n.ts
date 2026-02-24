@@ -14,7 +14,7 @@ const resources = {
             hero: {
                 title: "CROUSTILLANT À",
                 titleAccent: "L'EXTÉRIEUR.",
-                subtitle: "JUYEUX",
+                subtitle: "JUTEUX",
                 subtitleEnd: " À L'INTÉRIEUR.",
                 description: "Perfection dorée, panée à la main. Élu restaurant de poulet numéro 1 — découvrez la différence.",
                 orderNow: "COMMANDER",

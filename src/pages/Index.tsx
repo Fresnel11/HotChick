@@ -60,10 +60,10 @@ const Index = () => {
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="flex items-center gap-2 mb-5"
+              className="flex items-center gap-2 mb-6 bg-white/10 backdrop-blur-md border border-white/20 px-4 py-2 rounded-full w-fit shadow-lg shadow-black/5"
             >
-              <Flame className="w-5 h-5 text-primary" />
-              <span className="font-display text-primary tracking-[0.3em] text-sm drop-shadow-sm">
+              <Flame className="w-5 h-5 text-primary fill-primary/10" />
+              <span className="font-display text-primary-foreground tracking-[0.2em] text-xs font-bold drop-shadow-sm">
                 {t("hero.badge")}
               </span>
             </motion.div>
@@ -113,8 +113,8 @@ const Index = () => {
           </div>
         </div>
 
-        {/* Carousel Indicators (Dots) moved up (bottom-32) */}
-        <div className="absolute bottom-32 left-1/2 -translate-x-1/2 flex gap-3 z-20">
+        {/* Carousel Indicators (Dots) moved up (bottom-32) - Responsive position to avoid overlap on mobile */}
+        <div className="absolute bottom-20 md:bottom-32 left-1/2 -translate-x-1/2 flex gap-3 z-20">
           {heroImages.map((_, index) => (
             <button
               key={index}
