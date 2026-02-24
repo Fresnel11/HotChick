@@ -24,8 +24,9 @@ const Navbar = () => {
 
   // Let's refine the links based on labels from config
   const navLinks = [
-    { to: "/", label: i18n.language === "fr" ? "Accueil" : "Home" }, // I'll add this to config later or hardcode if simple
+    { to: "/", label: i18n.language === "fr" ? "Accueil" : "Home" },
     { to: "/menu", label: t("nav.menu") },
+    { to: "/locations", label: t("nav.locations") },
   ];
 
   const isActive = (path: string) => location.pathname === path;
