@@ -1,8 +1,23 @@
 import { Star, Quote } from "lucide-react";
 import { reviews } from "@/data/reviewsData";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 const TestimonialsSection = () => {
+  const { t } = useTranslation();
+
+  const getReviewDate = (id: number) => {
+    switch (id) {
+      case 1: return t("testimonials.daysAgo", { count: 2 });
+      case 2: return t("testimonials.aWeekAgo");
+      case 3: return t("testimonials.daysAgo", { count: 3 });
+      case 4: return t("testimonials.daysAgo", { count: 5 });
+      case 5: return t("testimonials.aWeekAgo");
+      case 6: return t("testimonials.daysAgo", { count: 4 });
+      default: return "";
+    }
+  };
+
   return (
     <section className="py-20 md:py-28 bg-background relative overflow-hidden">
       {/* Decorative background */}
@@ -20,14 +35,13 @@ const TestimonialsSection = () => {
           className="text-center mb-14"
         >
           <span className="font-display text-primary tracking-[0.3em] text-sm">
-            WHAT PEOPLE SAY
+            {t("testimonials.badge")}
           </span>
           <h2 className="font-display text-3xl md:text-5xl mt-2">
-            LOVED BY <span className="text-gradient">THOUSANDS</span>
+            {t("testimonials.title")}<span className="text-gradient">{t("testimonials.titleAccent")}</span>
           </h2>
           <p className="text-muted-foreground mt-3 max-w-lg mx-auto">
-            Don't just take our word for it — hear from our community of
-            chicken lovers.
+            {t("testimonials.description")}
           </p>
         </motion.div>
 
@@ -48,18 +62,17 @@ const TestimonialsSection = () => {
                 {Array.from({ length: 5 }).map((_, idx) => (
                   <Star
                     key={idx}
-                    className={`w-4 h-4 ${
-                      idx < review.rating
+                    className={`w-4 h-4 ${idx < review.rating
                         ? "fill-accent text-accent"
                         : "text-border"
-                    }`}
+                      }`}
                   />
                 ))}
               </div>
 
               {/* Comment */}
               <p className="text-foreground/80 text-sm leading-relaxed mb-5">
-                "{review.comment}"
+                "{t(`testimonials.review${review.id}`)}"
               </p>
 
               {/* Menu item tag */}
@@ -76,7 +89,7 @@ const TestimonialsSection = () => {
                   <p className="font-display text-sm tracking-wide">
                     {review.name}
                   </p>
-                  <p className="text-muted-foreground text-xs">{review.date}</p>
+                  <p className="text-muted-foreground text-xs">{getReviewDate(review.id)}</p>
                 </div>
               </div>
             </motion.div>

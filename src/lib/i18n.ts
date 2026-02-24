@@ -48,6 +48,22 @@ const resources = {
                 address: "123 Rue du Croustillant, Ville des Saveurs",
                 monFri: "Lun – Ven : 11h00 – 23h00",
                 satSun: "Sam – Dim : 10h00 – 00h00"
+            },
+            testimonials: {
+                badge: "CE QUE LES GENS DISENT",
+                title: "AIMÉ PAR DES ",
+                titleAccent: "MILLIERS",
+                description: "Ne vous contentez pas de nous croire sur parole — écoutez notre communauté d'amateurs de poulet.",
+                review1: "Le poulet le plus croustillant que j'aie jamais goûté ! L'OG Burger est absolument dément. Cet endroit change la donne.",
+                review2: "Le Family Bucket était parfait pour notre week-end. Chaque morceau était doré et juteux. Je recommanderai à coup sûr !",
+                review3: "Les meilleurs wraps au poulet de la ville, sans aucun doute. Le Spicy Caesar est un pur délice. Livraison rapide en plus !",
+                review4: "Les Loaded Cheese Fries sont addictives. Les portions sont généreuses et la qualité est toujours constante.",
+                review5: "Le Cookie Dough Sundae est paradisiaque ! Le moyen idéal de finir un repas. HotChick ne déçoit jamais.",
+                review6: "Le Spicy Inferno Burger porte bien son nom ! Niveau de piment parfait et croquant incroyable. 10/10 !",
+                daysAgo: "il y a {{count}} jours",
+                weeksAgo: "il y a {{count}} semaines",
+                aDayAgo: "hier",
+                aWeekAgo: "il y a 1 semaine"
             }
         }
     },
@@ -96,6 +112,22 @@ const resources = {
                 address: "123 Crispy Lane, Flavor Town",
                 monFri: "Mon – Fri: 11:00 AM – 11:00 PM",
                 satSun: "Sat – Sun: 10:00 AM – 12:00 AM"
+            },
+            testimonials: {
+                badge: "WHAT PEOPLE SAY",
+                title: "LOVED BY ",
+                titleAccent: "THOUSANDS",
+                description: "Don't just take our word for it — hear from our community of chicken lovers.",
+                review1: "The crispiest chicken I've ever tasted! The OG Burger is absolutely insane. This place is a game changer.",
+                review2: "Family Bucket was perfect for our weekend. Every piece was golden and juicy. Will definitely order again!",
+                review3: "Best chicken wraps in town, hands down. The Spicy Caesar is chef's kiss. Fast delivery too!",
+                review4: "Loaded Cheese Fries are addictive. Great portion sizes and the quality is always consistent.",
+                review5: "Cookie Dough Sundae is heavenly! Perfect way to finish a meal. HotChick never disappoints.",
+                review6: "The Spicy Inferno Burger lives up to its name! Perfect heat level and amazing crunch. 10/10!",
+                daysAgo: "{{count}} days ago",
+                weeksAgo: "{{count}} weeks ago",
+                aDayAgo: "1 day ago",
+                aWeekAgo: "1 week ago"
             }
         }
     }
