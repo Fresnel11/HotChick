@@ -36,7 +36,7 @@ const Navbar = () => {
     <nav className="sticky top-0 z-50 bg-white backdrop-blur-md border-b border-gray-200">
       <div className="container flex items-center justify-between h-16 md:h-20">
         {/* Logo */}
-        <Link to="/" className="flex items-center gap-2 group">
+        <Link to="/" className="flex items-center gap-1 md:gap-2 group">
           <motion.div whileHover={{ rotate: [0, -10, 10, 0] }} transition={{ duration: 0.5 }}>
             <img src={hotchickLogo} alt="HotChick" className="w-20 h-20" />
           </motion.div>
@@ -97,7 +97,7 @@ const Navbar = () => {
         <div className="flex items-center gap-3 md:hidden">
           <button
             onClick={toggleLanguage}
-            className="flex items-center gap-1 px-2 py-1 rounded-lg border border-gray-200 text-[10px] font-display uppercase text-gray-700"
+            className="flex items-center gap-1 px-3 py-1.5 rounded-lg border border-gray-200 text-xs font-display uppercase text-gray-700"
           >
             {i18n.language === "fr" ? "EN" : "FR"}
           </button>

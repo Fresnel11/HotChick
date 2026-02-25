@@ -3,7 +3,12 @@ import { Link } from "react-router-dom";
 import { ArrowRight, Flame, ChevronDown } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTranslation } from "react-i18next";
-import heroImage from "@/assets/hero-chicken.jpg";
+import heroImage from "@/assets/chick_hero.webp";
+import heroImage2 from "@/assets/photo-1568901346375-23c9450c58cd.webp";
+import heroImage3 from "@/assets/clipboard-image-1772002456.webp";
+import heroImage4 from "@/assets/hero_jus.webp";
+import heroImage5 from "@/assets/donut_hero.webp";
+import heroImage6 from "@/assets/photo-1622483767028-3f66f32aef97.webp";
 import { menuItems } from "@/data/menuData";
 import ProductCard from "@/components/ProductCard";
 import StatsBar from "@/components/StatsBar";
@@ -11,11 +16,11 @@ import TestimonialsSection from "@/components/TestimonialsSection";
 
 const heroImages = [
   { src: heroImage, alt: "Crispy chicken meals" },
-  { src: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=2000&auto=format&fit=crop", alt: "Gourmet Chicken Burger" },
-  { src: "https://images.unsplash.com/photo-1567620832903-9fc6debc209f?q=80&w=2000&auto=format&fit=crop", alt: "Golden Fried Tenders" },
-  { src: "https://images.unsplash.com/photo-1626700051175-6818013e1d4f?q=80&w=2000&auto=format&fit=crop", alt: "Fresh Chicken Wrap" },
-  { src: "https://images.unsplash.com/photo-1541592106381-b31e9677c0e5?q=80&w=2000&auto=format&fit=crop", alt: "Crispy French Fries" },
-  { src: "https://images.unsplash.com/photo-1622483767028-3f66f32aef97?q=80&w=2000&auto=format&fit=crop", alt: "Refreshing Beverages" },
+  { src: heroImage2, alt: "Gourmet Chicken Burger" },
+  { src: heroImage3, alt: "Golden Fried Tenders" },
+  { src: heroImage5, alt: "Crispy French Fries" },
+  { src: heroImage4, alt: "Fresh Chicken Wrap" },
+  { src: heroImage6, alt: "Refreshing Beverages" },
 ];
 
 const popularItems = menuItems.filter((i) => [1, 4, 9, 13].includes(i.id));
@@ -41,7 +46,7 @@ const Index = () => {
               key={currentImageIndex}
               src={heroImages[currentImageIndex].src}
               alt={heroImages[currentImageIndex].alt}
-              className="absolute inset-0 w-full h-full object-cover"
+              className="absolute inset-0 w-full h-full object-cover object-center md:object-center"
               initial={{ x: "100%" }}
               animate={{ x: 0 }}
               exit={{ x: "-100%" }}
@@ -56,60 +61,53 @@ const Index = () => {
 
         <div className="relative container z-10">
           <div className="max-w-2xl">
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="flex items-center gap-2 mb-6 bg-white/10 backdrop-blur-md border border-white/20 px-4 py-2 rounded-full w-fit shadow-lg shadow-black/5"
-            >
-              <Flame className="w-5 h-5 text-primary fill-primary/10" />
-              <span className="font-display text-primary-foreground tracking-[0.2em] text-xs font-bold drop-shadow-sm">
-                {t("hero.badge")}
-              </span>
-            </motion.div>
-
-            <motion.h1
-              initial={{ opacity: 0, y: 40 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.4 }}
-              className="font-display text-5xl md:text-7xl lg:text-8xl text-primary-foreground leading-[1.05] mb-6 drop-shadow-xl"
-            >
-              {t("hero.title")}
-              <br />
-              {t("hero.titleAccent")}
-              <br />
-              <span className="text-gradient">{t("hero.subtitle")}</span>{t("hero.subtitleEnd")}
-            </motion.h1>
-
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.7 }}
-              className="text-primary-foreground/90 text-lg md:text-xl mb-10 max-w-md leading-relaxed drop-shadow-md"
-            >
-              {t("hero.description")}
-            </motion.p>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.9 }}
-              className="flex flex-wrap gap-4"
-            >
-              <Link
-                to="/menu"
-                className="inline-flex items-center gap-2 bg-primary text-primary-foreground font-display tracking-wider text-lg px-8 py-4 rounded-xl hover:bg-primary/90 active:scale-95 transition-all shadow-lg shadow-primary/30"
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={currentImageIndex >= 4 ? "drink" : "food"}
+                initial={{ opacity: 0, scale: 0.9, y: 20 }}
+                animate={{ opacity: 1, scale: 1, y: 0 }}
+                exit={{ opacity: 0, scale: 1.1, y: -20 }}
+                transition={{ duration: 0.6, ease: "easeOut" }}
               >
-                {t("hero.orderNow")}
-                <ArrowRight className="w-5 h-5" />
-              </Link>
-              <Link
-                to="/menu"
-                className="inline-flex items-center gap-2 border-2 border-primary-foreground/50 text-primary-foreground font-display tracking-wider text-lg px-8 py-4 rounded-xl hover:bg-primary-foreground/10 transition-all backdrop-blur-md"
-              >
-                {t("hero.viewMenu")}
-              </Link>
-            </motion.div>
+                <div className="flex items-center gap-2 mb-6 bg-white/10 backdrop-blur-md border border-white/20 px-4 py-2 rounded-full w-fit shadow-lg shadow-black/5">
+                  <Flame className="w-5 h-5 text-primary fill-primary/10" />
+                  <span className="font-display text-primary-foreground tracking-[0.2em] text-xs font-bold drop-shadow-sm">
+                    {currentImageIndex >= 4 ? t("hero.drinkBadge") : t("hero.badge")}
+                  </span>
+                </div>
+
+                <h1 className="font-display text-5xl md:text-7xl lg:text-8xl text-primary-foreground mb-6 drop-shadow-xl space-y-4 md:space-y-5">
+                  <div>{currentImageIndex >= 4 ? t("hero.drinkTitle") : t("hero.title")}</div>
+                  <div>{currentImageIndex >= 4 ? t("hero.drinkTitleAccent") : t("hero.titleAccent")}</div>
+                  <div>
+                    <span className="text-gradient">
+                      {currentImageIndex >= 4 ? t("hero.drinkSubtitle") : t("hero.subtitle")}
+                    </span>
+                    {currentImageIndex >= 4 ? t("hero.drinkSubtitleEnd") : t("hero.subtitleEnd")}
+                  </div>
+                </h1>
+
+                <p className="text-primary-foreground/90 text-lg md:text-xl mb-10 max-w-md leading-relaxed drop-shadow-md">
+                  {currentImageIndex >= 4 ? t("hero.drinkDescription") : t("hero.description")}
+                </p>
+
+                <div className="flex flex-wrap gap-4">
+                  <Link
+                    to="/menu"
+                    className="inline-flex items-center gap-2 bg-primary text-primary-foreground font-display tracking-wider text-lg px-8 py-4 rounded-xl hover:bg-primary/90 active:scale-95 transition-all shadow-lg shadow-primary/30"
+                  >
+                    {t("hero.orderNow")}
+                    <ArrowRight className="w-5 h-5" />
+                  </Link>
+                  <Link
+                    to="/menu"
+                    className="inline-flex items-center gap-2 border-2 border-primary-foreground/50 text-primary-foreground font-display tracking-wider text-lg px-8 py-4 rounded-xl hover:bg-primary-foreground/10 transition-all backdrop-blur-md"
+                  >
+                    {t("hero.viewMenu")}
+                  </Link>
+                </div>
+              </motion.div>
+            </AnimatePresence>
           </div>
         </div>
 

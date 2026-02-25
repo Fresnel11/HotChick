@@ -33,6 +33,7 @@ const ProductCard = ({ item }: { item: MenuItem }) => {
         <img
           src={item.image}
           alt={translatedName}
+          loading="lazy"
           className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-foreground/50 via-transparent to-transparent" />

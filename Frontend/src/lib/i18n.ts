@@ -19,7 +19,13 @@ const resources = {
                 description: "Perfection dorée, panée à la main. Élu restaurant de poulet numéro 1 — découvrez la différence.",
                 orderNow: "COMMANDER",
                 viewMenu: "VOIR LE MENU",
-                badge: "POULET CROUSTILLANT PREMIUM"
+                badge: "POULET CROUSTILLANT PREMIUM",
+                drinkBadge: "FRAÎCHEUR NATURELLE",
+                drinkTitle: "FRAÎCHEUR",
+                drinkTitleAccent: "INSTANTANÉE.",
+                drinkSubtitle: "DÉCOUVREZ",
+                drinkSubtitleEnd: " NOS JUS NATURELS.",
+                drinkDescription: "Des ingrédients frais, des saveurs locales. Le compagnon parfait pour votre poulet croustillant."
             },
             stats: {
                 rating: "Note moyenne",
@@ -197,7 +203,13 @@ const resources = {
                 description: "Hand-breaded, golden-fried perfection. Voted #1 chicken restaurant — experience the difference.",
                 orderNow: "ORDER NOW",
                 viewMenu: "VIEW MENU",
-                badge: "PREMIUM CRISPY CHICKEN"
+                badge: "PREMIUM CRISPY CHICKEN",
+                drinkBadge: "NATURAL FRESHNESS",
+                drinkTitle: "REFRESH",
+                drinkTitleAccent: "INSTANTLY.",
+                drinkSubtitle: "DISCOVER",
+                drinkSubtitleEnd: " OUR NATURAL JUICES.",
+                drinkDescription: "Fresh ingredients, local flavors. The perfect companion for your crispy chicken."
             },
             stats: {
                 rating: "Average Rating",

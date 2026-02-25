@@ -10,6 +10,8 @@ const Footer = () => {
   const quickLinks = [
     { to: "/", label: i18n.language === "fr" ? "Accueil" : "Home" },
     { to: "/menu", label: "Menu" },
+    { to: "/locations", label: t("nav.locations") },
+    { to: "/reservation", label: i18n.language === "fr" ? "Réserver" : "Reserve" },
     { to: "/cart", label: t("nav.cart") },
   ];
 
