@@ -17,6 +17,7 @@ import ItemDetailPage from "./pages/ItemDetailPage";
 import LocationsPage from "./pages/LocationsPage";
 import ReservationPage from "./pages/ReservationPage";
 import FAQPage from "./pages/FAQPage";
+import { Analytics } from "@vercel/analytics/next"
 
 const queryClient = new QueryClient();
 
@@ -26,6 +27,7 @@ const App = () => (
       <Sonner />
       <CookieConsent />
       <ScrollToTopButton />
+      <Analytics />
       <CartProvider>
         <BrowserRouter>
           <ScrollToTop />
