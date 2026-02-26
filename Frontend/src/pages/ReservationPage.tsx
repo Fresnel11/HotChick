@@ -117,18 +117,9 @@ const ReservationPage = () => {
 
                     <button
                         onClick={() => setConfirmed(null)}
-                        className="w-full bg-primary text-primary-foreground font-display tracking-wider py-3 rounded-xl hover:bg-primary/90 transition-all mb-3"
+                        className="w-full bg-primary text-primary-foreground font-display tracking-wider py-3 rounded-xl hover:bg-primary/90 transition-all"
                     >
                         {isFr ? "FAIRE UNE AUTRE RÉSERVATION" : "MAKE ANOTHER RESERVATION"}
-                    </button>
-                    <button
-                        onClick={() => {
-                            setConfirmed(null);
-                            toast.success(isFr ? "Réservation annulée" : "Reservation cancelled");
-                        }}
-                        className="w-full bg-muted text-foreground font-display tracking-wider py-3 rounded-xl hover:bg-muted/80 transition-all border border-border"
-                    >
-                        {isFr ? "ANNULER LA RÉSERVATION" : "CANCEL RESERVATION"}
                     </button>
                 </motion.div>
             </main>

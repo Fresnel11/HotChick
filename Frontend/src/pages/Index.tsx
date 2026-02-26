@@ -41,7 +41,7 @@ const Index = () => {
     <main>
       {/* Hero Section */}
       <section className="relative min-h-[90vh] md:min-h-screen flex items-center overflow-hidden">
-        <div className="absolute inset-0 z-0">
+        <div className="absolute inset-0 z-0 bg-black">
           <AnimatePresence initial={false}>
             <motion.img
               key={currentImageIndex}
@@ -51,7 +51,7 @@ const Index = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              transition={{ duration: 0.7, ease: "easeInOut" }}
+              transition={{ duration: 1.2, ease: "easeInOut" }}
             />
           </AnimatePresence>
         </div>

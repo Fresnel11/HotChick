@@ -31,7 +31,7 @@ const resources = {
                 rating: "Note moyenne",
                 customers: "Clients satisfaits",
                 locations: "Restaurants",
-                best: "Meilleur Poulet 2025"
+                best: "Meilleur Poulet 2026"
             },
             popular: {
                 badge: "LES FAVORIS",
