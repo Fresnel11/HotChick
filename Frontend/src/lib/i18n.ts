@@ -189,6 +189,60 @@ const resources = {
                 badge: "NOTRE ÉQUIPE",
                 title: "PROFESSIONNELS PASSIONNÉS",
                 description: "Une équipe dévouée qui travaille chaque jour pour vous offrir la meilleure expérience culinaire."
+            },
+            faq: {
+                badge: "AIDE",
+                title: "QUESTIONS FRÉQUENTES",
+                description: "Trouvez rapidement les réponses à vos questions.",
+                ordering: {
+                    category: "Commande",
+                    q1: "Comment passer une commande ?",
+                    a1: "Parcourez notre menu, ajoutez vos plats au panier, puis cliquez sur 'Passer à la caisse'. Remplissez vos informations et validez votre commande.",
+                    q2: "Puis-je modifier ma commande après validation ?",
+                    a2: "Contactez-nous immédiatement au +229 XX XX XX XX. Si la préparation n'a pas commencé, nous pourrons modifier votre commande.",
+                    q3: "Quel est le montant minimum de commande ?",
+                    a3: "Le montant minimum de commande est de 2000 FCFA pour la livraison. Aucun minimum pour le retrait en restaurant.",
+                    q4: "Puis-je commander pour plus tard ?",
+                    a4: "Oui, lors de la commande, sélectionnez l'heure souhaitée pour la livraison ou le retrait."
+                },
+                delivery: {
+                    category: "Livraison",
+                    q1: "Quels sont les délais de livraison ?",
+                    a1: "En moyenne 30-45 minutes selon votre localisation. Vous recevrez une estimation précise lors de la commande.",
+                    q2: "Quelles sont les zones de livraison ?",
+                    a2: "Nous livrons dans toute la ville de Cotonou, Porto-Novo, Parakou et Abomey-Calavi. Consultez notre page Localisations pour plus de détails.",
+                    q3: "Quels sont les frais de livraison ?",
+                    a3: "Les frais varient de 500 à 1500 FCFA selon la distance. Livraison gratuite pour les commandes supérieures à 10000 FCFA.",
+                    q4: "Comment suivre ma commande ?",
+                    a4: "Vous recevrez un SMS avec le statut de votre commande : en préparation, en route, livrée."
+                },
+                payment: {
+                    category: "Paiement",
+                    q1: "Quels modes de paiement acceptez-vous ?",
+                    a1: "Nous acceptons le paiement en espèces à la livraison, MTN Mobile Money, Moov Money et les cartes bancaires.",
+                    q2: "Le paiement en ligne est-il sécurisé ?",
+                    a2: "Oui, toutes les transactions sont cryptées et sécurisées. Nous ne conservons aucune information bancaire.",
+                    q3: "Puis-je avoir une facture ?",
+                    a3: "Oui, une facture électronique vous sera envoyée par email après chaque commande."
+                },
+                menu: {
+                    category: "Menu & Produits",
+                    q1: "Vos produits contiennent-ils des allergènes ?",
+                    a1: "Nos plats peuvent contenir du gluten, des œufs, du lait et des arachides. Contactez-nous pour des informations spécifiques.",
+                    q2: "Proposez-vous des options végétariennes ?",
+                    a2: "Oui, nous avons des accompagnements, salades et desserts végétariens. Consultez notre menu pour plus de détails.",
+                    q3: "Puis-je personnaliser mon plat ?",
+                    a3: "Oui, vous pouvez ajouter des notes spéciales lors de la commande (sans oignons, extra sauce, etc.)."
+                },
+                reservation: {
+                    category: "Réservation",
+                    q1: "Comment réserver une table ?",
+                    a1: "Rendez-vous sur notre page Réservation, sélectionnez le restaurant, la date, l'heure et le nombre de personnes.",
+                    q2: "Puis-je annuler ma réservation ?",
+                    a2: "Oui, vous pouvez annuler jusqu'à 2 heures avant l'heure prévue en nous contactant.",
+                    q3: "Organisez-vous des événements privés ?",
+                    a3: "Oui, nous proposons des formules pour anniversaires, réunions d'entreprise et événements. Contactez-nous pour un devis."
+                }
             }
         }
     },
@@ -378,6 +432,60 @@ const resources = {
                 badge: "OUR TEAM",
                 title: "PASSIONATE PROFESSIONALS",
                 description: "A dedicated team working every day to bring you the best culinary experience."
+            },
+            faq: {
+                badge: "HELP",
+                title: "FREQUENTLY ASKED QUESTIONS",
+                description: "Find quick answers to your questions.",
+                ordering: {
+                    category: "Ordering",
+                    q1: "How do I place an order?",
+                    a1: "Browse our menu, add items to your cart, then click 'Checkout'. Fill in your information and confirm your order.",
+                    q2: "Can I modify my order after confirmation?",
+                    a2: "Contact us immediately at +229 XX XX XX XX. If preparation hasn't started, we can modify your order.",
+                    q3: "What is the minimum order amount?",
+                    a3: "The minimum order for delivery is 2000 FCFA. No minimum for restaurant pickup.",
+                    q4: "Can I order for later?",
+                    a4: "Yes, when ordering, select your preferred time for delivery or pickup."
+                },
+                delivery: {
+                    category: "Delivery",
+                    q1: "What are the delivery times?",
+                    a1: "Average 30-45 minutes depending on your location. You'll receive a precise estimate when ordering.",
+                    q2: "What are the delivery zones?",
+                    a2: "We deliver throughout Cotonou, Porto-Novo, Parakou and Abomey-Calavi. Check our Locations page for details.",
+                    q3: "What are the delivery fees?",
+                    a3: "Fees range from 500 to 1500 FCFA depending on distance. Free delivery for orders over 10000 FCFA.",
+                    q4: "How can I track my order?",
+                    a4: "You'll receive an SMS with your order status: preparing, on the way, delivered."
+                },
+                payment: {
+                    category: "Payment",
+                    q1: "What payment methods do you accept?",
+                    a1: "We accept cash on delivery, MTN Mobile Money, Moov Money and bank cards.",
+                    q2: "Is online payment secure?",
+                    a2: "Yes, all transactions are encrypted and secure. We don't store any banking information.",
+                    q3: "Can I get an invoice?",
+                    a3: "Yes, an electronic invoice will be sent to your email after each order."
+                },
+                menu: {
+                    category: "Menu & Products",
+                    q1: "Do your products contain allergens?",
+                    a1: "Our dishes may contain gluten, eggs, milk and peanuts. Contact us for specific information.",
+                    q2: "Do you offer vegetarian options?",
+                    a2: "Yes, we have vegetarian sides, salads and desserts. Check our menu for details.",
+                    q3: "Can I customize my dish?",
+                    a3: "Yes, you can add special notes when ordering (no onions, extra sauce, etc.)."
+                },
+                reservation: {
+                    category: "Reservation",
+                    q1: "How do I reserve a table?",
+                    a1: "Go to our Reservation page, select the restaurant, date, time and number of people.",
+                    q2: "Can I cancel my reservation?",
+                    a2: "Yes, you can cancel up to 2 hours before the scheduled time by contacting us.",
+                    q3: "Do you organize private events?",
+                    a3: "Yes, we offer packages for birthdays, corporate meetings and events. Contact us for a quote."
+                }
             }
         }
     }

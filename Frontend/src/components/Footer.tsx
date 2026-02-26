@@ -12,6 +12,7 @@ const Footer = () => {
     { to: "/menu", label: "Menu" },
     { to: "/locations", label: t("nav.locations") },
     { to: "/reservation", label: i18n.language === "fr" ? "Réserver" : "Reserve" },
+    { to: "/faq", label: "FAQ" },
     { to: "/cart", label: t("nav.cart") },
   ];
 
