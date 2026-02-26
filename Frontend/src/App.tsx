@@ -6,6 +6,8 @@ import { CartProvider } from "@/context/CartContext";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import CookieConsent from "@/components/CookieConsent";
+import ScrollToTop from "@/components/ScrollToTop";
+import ScrollToTopButton from "@/components/ScrollToTopButton";
 import Index from "./pages/Index";
 import MenuPage from "./pages/MenuPage";
 import CartPage from "./pages/CartPage";
@@ -22,8 +24,10 @@ const App = () => (
     <TooltipProvider>
       <Sonner />
       <CookieConsent />
+      <ScrollToTopButton />
       <CartProvider>
         <BrowserRouter>
+          <ScrollToTop />
           <Navbar />
           <Routes>
             <Route path="/" element={<Index />} />

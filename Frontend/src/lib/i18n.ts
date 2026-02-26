@@ -184,6 +184,11 @@ const resources = {
             notFound: {
                 title: "Oups ! Page non trouvée",
                 backHome: "Retour à l'accueil"
+            },
+            team: {
+                badge: "NOTRE ÉQUIPE",
+                title: "PROFESSIONNELS PASSIONNÉS",
+                description: "Une équipe dévouée qui travaille chaque jour pour vous offrir la meilleure expérience culinaire."
             }
         }
     },
@@ -368,6 +373,11 @@ const resources = {
             notFound: {
                 title: "Oops! Page not found",
                 backHome: "Return to Home"
+            },
+            team: {
+                badge: "OUR TEAM",
+                title: "PASSIONATE PROFESSIONALS",
+                description: "A dedicated team working every day to bring you the best culinary experience."
             }
         }
     }

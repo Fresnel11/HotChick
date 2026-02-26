@@ -41,6 +41,15 @@ const MenuPage = () => {
     return items;
   }, [activeCategory, sortKey, search, t]);
 
+  const groupedByCategory = useMemo(() => {
+    const groups: Record<string, typeof menuItems> = {};
+    filtered.forEach(item => {
+      if (!groups[item.category]) groups[item.category] = [];
+      groups[item.category].push(item);
+    });
+    return groups;
+  }, [filtered]);
+
   const activeSortLabel = sortOptions.find((o) => o.key === sortKey)?.label ?? "";
 
   return (
@@ -132,7 +141,7 @@ const MenuPage = () => {
           ))}
         </motion.div>
 
-        {/* Grid */}
+        {/* Grouped by Category */}
         <AnimatePresence mode="wait">
           {filtered.length === 0 ? (
             <motion.p
@@ -145,25 +154,35 @@ const MenuPage = () => {
               {t("menu.noResults")}
             </motion.p>
           ) : (
-            <motion.div
-              key={`${activeCategory}-${sortKey}-${search}`}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -10 }}
-              transition={{ duration: 0.3 }}
-              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
-            >
-              {filtered.map((item, i) => (
-                <motion.div
-                  key={item.id}
-                  initial={{ opacity: 0, y: 30 }}
+            <div className="space-y-16">
+              {Object.entries(groupedByCategory).map(([category, items]) => (
+                <motion.section
+                  key={category}
+                  initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.4, delay: i * 0.04 }}
+                  transition={{ duration: 0.5 }}
                 >
-                  <ProductCard item={item} />
-                </motion.div>
+                  <div className="mb-8">
+                    <h2 className="font-display text-3xl md:text-4xl text-primary mb-2">
+                      {t(`menu.categories.${category.toLowerCase().replace(/\s+/g, "_")}`)}
+                    </h2>
+                    <div className="h-1 w-20 bg-gradient-to-r from-primary to-accent rounded-full" />
+                  </div>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                    {items.map((item, i) => (
+                      <motion.div
+                        key={item.id}
+                        initial={{ opacity: 0, y: 30 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.4, delay: i * 0.04 }}
+                      >
+                        <ProductCard item={item} />
+                      </motion.div>
+                    ))}
+                  </div>
+                </motion.section>
               ))}
-            </motion.div>
+            </div>
           )}
         </AnimatePresence>
       </div>

@@ -9,6 +9,7 @@ import heroImage3 from "@/assets/clipboard-image-1772002456.webp";
 import heroImage4 from "@/assets/hero_jus.webp";
 import heroImage5 from "@/assets/donut_hero.webp";
 import heroImage6 from "@/assets/photo-1622483767028-3f66f32aef97.webp";
+import teamImage from "@/assets/equipe_hotchick.webp";
 import { menuItems } from "@/data/menuData";
 import ProductCard from "@/components/ProductCard";
 import StatsBar from "@/components/StatsBar";
@@ -41,16 +42,16 @@ const Index = () => {
       {/* Hero Section */}
       <section className="relative min-h-[90vh] md:min-h-screen flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <AnimatePresence initial={false} mode="popLayout">
+          <AnimatePresence initial={false}>
             <motion.img
               key={currentImageIndex}
               src={heroImages[currentImageIndex].src}
               alt={heroImages[currentImageIndex].alt}
               className="absolute inset-0 w-full h-full object-cover object-center md:object-center"
-              initial={{ x: "100%" }}
-              animate={{ x: 0 }}
-              exit={{ x: "-100%" }}
-              transition={{ duration: 0.8, ease: [0.4, 0, 0.2, 1] }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.7, ease: "easeInOut" }}
             />
           </AnimatePresence>
         </div>
@@ -188,6 +189,48 @@ const Index = () => {
               {t("popular.seeAll")}
               <ArrowRight className="w-4 h-4" />
             </Link>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Team Section */}
+      <section className="relative py-24 md:py-32 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5" />
+        <div className="container relative">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-14"
+          >
+            <span className="font-display text-primary tracking-[0.3em] text-sm">
+              {t("team.badge")}
+            </span>
+            <h2 className="font-display text-3xl md:text-5xl mt-2">
+              {t("team.title")}
+            </h2>
+            <p className="text-muted-foreground mt-3 max-w-md mx-auto">
+              {t("team.description")}
+            </p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+            className="max-w-5xl mx-auto relative"
+          >
+            <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 via-accent/20 to-primary/20 rounded-3xl blur-2xl" />
+            <div className="relative bg-card rounded-2xl p-2 shadow-2xl">
+              <img
+                src={teamImage}
+                alt="Équipe HotChick"
+                className="w-full h-auto rounded-xl"
+                loading="lazy"
+              />
+            </div>
           </motion.div>
         </div>
       </section>
