@@ -62,58 +62,61 @@ const Index = () => {
 
         <div className="relative container z-10">
           <div className="max-w-2xl">
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={currentImageIndex >= 4 ? "drink" : "food"}
-                initial={{ opacity: 0, scale: 0.9, y: 20 }}
-                animate={{ opacity: 1, scale: 1, y: 0 }}
-                exit={{ opacity: 0, scale: 1.1, y: -20 }}
-                transition={{ duration: 0.6, ease: "easeOut" }}
-              >
-                <div className="flex items-center gap-2 mb-6 bg-white/10 backdrop-blur-md border border-white/20 px-4 py-2 rounded-full w-fit shadow-lg shadow-black/5">
-                  <Flame className="w-5 h-5 text-primary fill-primary/10" />
-                  <span className="font-display text-primary-foreground tracking-[0.2em] text-xs font-bold drop-shadow-sm">
-                    {currentImageIndex >= 4 ? t("hero.drinkBadge") : t("hero.badge")}
-                  </span>
-                </div>
-
-                <h1 className="font-display text-5xl md:text-7xl lg:text-8xl text-primary-foreground mb-6 drop-shadow-xl space-y-4 md:space-y-5">
-                  <div>{currentImageIndex >= 4 ? t("hero.drinkTitle") : t("hero.title")}</div>
-                  <div>{currentImageIndex >= 4 ? t("hero.drinkTitleAccent") : t("hero.titleAccent")}</div>
-                  <div>
-                    <span className="text-gradient">
-                      {currentImageIndex >= 4 ? t("hero.drinkSubtitle") : t("hero.subtitle")}
+            <div className="min-h-[400px] md:min-h-[450px] flex flex-col">
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={currentImageIndex >= 4 ? "drink" : "food"}
+                  initial={{ opacity: 0, scale: 0.9, y: 20 }}
+                  animate={{ opacity: 1, scale: 1, y: 0 }}
+                  exit={{ opacity: 0, scale: 1.1, y: -20 }}
+                  transition={{ duration: 0.6, ease: "easeOut" }}
+                  className="flex-1"
+                >
+                  <div className="flex items-center gap-2 mb-6 bg-white/10 backdrop-blur-md border border-white/20 px-4 py-2 rounded-full w-fit shadow-lg shadow-black/5">
+                    <Flame className="w-5 h-5 text-primary fill-primary/10" />
+                    <span className="font-display text-primary-foreground tracking-[0.2em] text-xs font-bold drop-shadow-sm">
+                      {currentImageIndex >= 4 ? t("hero.drinkBadge") : t("hero.badge")}
                     </span>
-                    {currentImageIndex >= 4 ? t("hero.drinkSubtitleEnd") : t("hero.subtitleEnd")}
                   </div>
-                </h1>
 
-                <p className="text-primary-foreground/90 text-lg md:text-xl mb-10 max-w-md leading-relaxed drop-shadow-md">
-                  {currentImageIndex >= 4 ? t("hero.drinkDescription") : t("hero.description")}
-                </p>
+                  <h1 className="font-display text-3xl sm:text-4xl md:text-7xl lg:text-8xl text-primary-foreground mb-4 md:mb-6 drop-shadow-xl space-y-2 sm:space-y-3 md:space-y-5">
+                    <div>{currentImageIndex >= 4 ? t("hero.drinkTitle") : t("hero.title")}</div>
+                    <div>{currentImageIndex >= 4 ? t("hero.drinkTitleAccent") : t("hero.titleAccent")}</div>
+                    <div>
+                      <span className="text-gradient">
+                        {currentImageIndex >= 4 ? t("hero.drinkSubtitle") : t("hero.subtitle")}
+                      </span>
+                      {currentImageIndex >= 4 ? t("hero.drinkSubtitleEnd") : t("hero.subtitleEnd")}
+                    </div>
+                  </h1>
 
-                <div className="flex flex-wrap gap-4">
-                  <Link
-                    to="/menu"
-                    className="inline-flex items-center gap-2 bg-primary text-primary-foreground font-display tracking-wider text-lg px-8 py-4 rounded-xl hover:bg-primary/90 active:scale-95 transition-all shadow-lg shadow-primary/30"
-                  >
-                    {t("hero.orderNow")}
-                    <ArrowRight className="w-5 h-5" />
-                  </Link>
-                  <Link
-                    to="/menu"
-                    className="inline-flex items-center gap-2 border-2 border-primary-foreground/50 text-primary-foreground font-display tracking-wider text-lg px-8 py-4 rounded-xl hover:bg-primary-foreground/10 transition-all backdrop-blur-md"
-                  >
-                    {t("hero.viewMenu")}
-                  </Link>
-                </div>
-              </motion.div>
-            </AnimatePresence>
+                  <p className="text-primary-foreground/90 text-sm sm:text-base md:text-lg lg:text-xl mb-6 md:mb-10 max-w-md leading-relaxed drop-shadow-md">
+                    {currentImageIndex >= 4 ? t("hero.drinkDescription") : t("hero.description")}
+                  </p>
+                </motion.div>
+              </AnimatePresence>
+
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+                <Link
+                  to="/menu"
+                  className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground font-display tracking-wider text-sm sm:text-base md:text-lg px-6 sm:px-8 py-3 sm:py-4 rounded-xl hover:bg-primary/90 active:scale-95 transition-all shadow-lg shadow-primary/30"
+                >
+                  {t("hero.orderNow")}
+                  <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
+                </Link>
+                <Link
+                  to="/locations"
+                  className="inline-flex items-center justify-center gap-2 border-2 border-primary-foreground/50 text-primary-foreground font-display tracking-wider text-sm sm:text-base md:text-lg px-6 sm:px-8 py-3 sm:py-4 rounded-xl hover:bg-primary-foreground/10 transition-all backdrop-blur-md"
+                >
+                  {t("nav.locations")}
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
 
-        {/* Carousel Indicators (Dots) moved up (bottom-32) - Responsive position to avoid overlap on mobile */}
-        <div className="absolute bottom-20 md:bottom-32 left-1/2 -translate-x-1/2 flex gap-3 z-20">
+        {/* Carousel Indicators (Dots) - Hidden on mobile, visible on desktop */}
+        <div className="hidden md:flex absolute bottom-20 md:bottom-32 left-1/2 -translate-x-1/2 gap-3 z-20">
           {heroImages.map((_, index) => (
             <button
               key={index}
