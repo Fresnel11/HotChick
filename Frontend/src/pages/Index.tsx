@@ -40,7 +40,7 @@ const Index = () => {
   return (
     <main>
       {/* Hero Section */}
-      <section className="relative min-h-[90vh] md:min-h-screen flex items-center overflow-hidden">
+      <section className="relative min-h-[90vh] md:min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0 bg-black">
           <AnimatePresence initial={false}>
             <motion.img
@@ -60,9 +60,9 @@ const Index = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-foreground/60 via-foreground/30 to-transparent z-[1]" />
         <div className="absolute inset-0 bg-gradient-to-t from-foreground/15 to-transparent z-[1]" />
 
-        <div className="relative container z-10">
+        <div className="relative container z-10 -mt-20 md:-mt-32">
           <div className="max-w-2xl">
-            <div className="min-h-[400px] md:min-h-[450px] flex flex-col">
+            <div className="min-h-[350px] md:min-h-[400px] flex flex-col">
               <AnimatePresence mode="wait">
                 <motion.div
                   key={currentImageIndex >= 4 ? "drink" : "food"}
@@ -72,14 +72,14 @@ const Index = () => {
                   transition={{ duration: 0.6, ease: "easeOut" }}
                   className="flex-1"
                 >
-                  <div className="flex items-center gap-2 mb-6 bg-white/10 backdrop-blur-md border border-white/20 px-4 py-2 rounded-full w-fit shadow-lg shadow-black/5">
+                  <div className="flex items-center gap-2 mb-4 md:mb-6 bg-white/10 backdrop-blur-md border border-white/20 px-4 py-2 rounded-full w-fit shadow-lg shadow-black/5">
                     <Flame className="w-5 h-5 text-primary fill-primary/10" />
                     <span className="font-display text-primary-foreground tracking-[0.2em] text-xs font-bold drop-shadow-sm">
                       {currentImageIndex >= 4 ? t("hero.drinkBadge") : t("hero.badge")}
                     </span>
                   </div>
 
-                  <h1 className="font-display text-3xl sm:text-4xl md:text-7xl lg:text-8xl text-primary-foreground mb-4 md:mb-6 drop-shadow-xl space-y-2 sm:space-y-3 md:space-y-5">
+                  <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-primary-foreground mb-3 md:mb-5 drop-shadow-xl space-y-2 sm:space-y-3 md:space-y-4">
                     <div>{currentImageIndex >= 4 ? t("hero.drinkTitle") : t("hero.title")}</div>
                     <div>{currentImageIndex >= 4 ? t("hero.drinkTitleAccent") : t("hero.titleAccent")}</div>
                     <div>
@@ -90,7 +90,7 @@ const Index = () => {
                     </div>
                   </h1>
 
-                  <p className="text-primary-foreground/90 text-sm sm:text-base md:text-lg lg:text-xl mb-6 md:mb-10 max-w-md leading-relaxed drop-shadow-md">
+                  <p className="text-primary-foreground/90 text-sm sm:text-base md:text-base lg:text-lg mb-6 md:mb-8 max-w-md leading-relaxed drop-shadow-md">
                     {currentImageIndex >= 4 ? t("hero.drinkDescription") : t("hero.description")}
                   </p>
                 </motion.div>
@@ -99,14 +99,14 @@ const Index = () => {
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
                 <Link
                   to="/menu"
-                  className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground font-display tracking-wider text-sm sm:text-base md:text-lg px-6 sm:px-8 py-3 sm:py-4 rounded-xl hover:bg-primary/90 active:scale-95 transition-all shadow-lg shadow-primary/30"
+                  className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground font-display tracking-wider text-sm sm:text-base md:text-base px-6 sm:px-8 py-3 sm:py-3.5 rounded-xl hover:bg-primary/90 active:scale-95 transition-all shadow-lg shadow-primary/30"
                 >
                   {t("hero.orderNow")}
                   <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
                 </Link>
                 <Link
                   to="/locations"
-                  className="inline-flex items-center justify-center gap-2 border-2 border-primary-foreground/50 text-primary-foreground font-display tracking-wider text-sm sm:text-base md:text-lg px-6 sm:px-8 py-3 sm:py-4 rounded-xl hover:bg-primary-foreground/10 transition-all backdrop-blur-md"
+                  className="inline-flex items-center justify-center gap-2 border-2 border-primary-foreground/50 text-primary-foreground font-display tracking-wider text-sm sm:text-base md:text-base px-6 sm:px-8 py-3 sm:py-3.5 rounded-xl hover:bg-primary-foreground/10 transition-all backdrop-blur-md"
                 >
                   {t("nav.locations")}
                 </Link>
